@@ -1,6 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import PropTypes from "prop-types";
+import {Link} from 'react-router-dom'
 
 const Header = props => {
   const { branding } = props;
@@ -14,9 +15,19 @@ const Header = props => {
           </a>
           <ul className="navbar-nav float-right">
             <li className="d-flex justify-content-end">
-              <a href="/" className="nav-link">
-                Home
-              </a>
+              <Link to="/" className="nav-link">
+              <i class="fas fa-home"></i> Home
+              </Link>
+            </li>
+            <li className="d-flex justify-content-end">
+              <Link to="/contact/add" className="nav-link">
+              <i class="fas fa-plus"></i> Add
+              </Link>
+            </li>
+            <li className="d-flex justify-content-end">
+              <Link to="/about" className="nav-link">
+                About
+              </Link>
             </li>
           </ul>
         </div>
